@@ -1,0 +1,118 @@
+body {
+    font-family: sans-serif;
+    background: #131313;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: #232323;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.box .input-box {
+    position: relative;
+}
+
+.box .input-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.box .input-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s
+}
+
+.box .input-box input:focus ~ label,
+.box .input-box input:valid ~ label  {
+    top: -20px;
+    left: 0;
+    color: #9bdc28;
+    font-size: 12px;
+}
+
+
+.box form a {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 180px;
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.box form a:hover {
+    border: 2px solid #9bdc28;
+    color: #9bdc28;
+}
+
+.box form a::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -2px;
+    width: calc(100% + 6px);
+    height: calc(100% - 14px);
+    background: #232323;
+    transition: 0.5s ease-in-out;
+    transform: scaleY(1);
+    transition-delay: 0.5s;
+}
+
+.box form a::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: -3px;
+    height: calc(100% + 6px);
+    width: calc(100% - 14px);
+    background: #232323;
+    transition: 0.5s ease-in-out;
+    transform: scaleX(1);
+}
+
+.box form a:hover:after {
+    transform: scaleX(0);
+}
+
+.box form a:hover:before {
+    transform: scaleY(0);
+}
+
+
+.box form a span {
+    position: relative;
+    z-index: 3;
+}
+
